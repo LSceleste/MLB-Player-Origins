@@ -43,11 +43,12 @@ var myMap = L.map("map", {
     for (var i = 0; i < playerData.length; i++) {
          // Add a new marker to the cluster group and bind a pop-up
         markers.addLayer(L.marker([playerData[i]["latitude"], playerData[i]["longitude"]])
-          //This is where we ADD what info we want displayed plus html tags to style info
-            .bindPopup("<h3>" + "Player: " + "<h4>" + playerData[i].nameFirst + " " +
-            playerData[i].nameLast + "</h4>" + "</h3><hr>" + "<h3>" + "Birth Place: " + 
-            "</h3>" + "<h4>" + playerData[i].birthCity + ", " + playerData[i].country_iso_code + "</h4><hr>" + 
-            "<h3>" + "Birth Year: " + "<h4>" + playerData[i].birthYear + "</h4></p>"));
+        //This is where we ADD what info we want displayed plus html tags to style info
+          .bindPopup("<h7>" + "Player: " + "<h8>" + playerData[i].nameFirst + " " +
+          playerData[i].nameLast + "</h8>" + "</h7><hr>" + "<h7>" + "Birth Place: " + 
+          "</h7>" + "<h8>" + playerData[i].birthCity + ", " + playerData[i].country_iso_code +
+          "<img  style='max-width:75px' src=" + playerData[i].flags + " ></img></h8><hr>" + 
+          "<h7>" + "Birth Year: " + "<h8>" + playerData[i].birthYear + "</h8></p>"));
       }
   
     

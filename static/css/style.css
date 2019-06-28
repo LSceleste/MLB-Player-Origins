@@ -1,10 +1,189 @@
-body {
-  padding: 0;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css?family=Lobster|Playball|Source+Serif+Pro&display=swap');
+/* font-family: 'Lobster', cursive;
+font-family: 'Playball', cursive;
+font-family: 'Source Serif Pro', serif; */
+
+
+html, body
+{
+    height: 100%;
+    background-image: url('../src/assets/background.png')
 }
 
-#map,
-body,
-html {
-  height: 100%;
+
+/* NAVBAR */
+.navbar-nav > li{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.navbar-brand img{
+  height: 70px;
+  width: 350px;
+  padding-left: 15px;
+}
+.navbar-brand {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 35px;
+  color: rgb(0, 0, 85) !important;
+  transition: all 0.5s ease-in;
+}
+.navbar-brand:hover {
+  color: rgb(205, 0, 1) !important;
+}
+.nav-link {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 0, 85) !important;
+  font-family: 'Source Serif Pro', serif;
+  transition: all 0.5s ease-in;
+}
+.nav-link:hover {
+  color: rgb(205, 0, 1) !important;
+}
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar .navbar-toggler {
+  margin-right: 30px;
+  background-color: white;
+}
+.navbar {
+  margin-bottom: 1%;
+}
+.bg-light {
+  background-color: #ffffff !important;
+}
+
+
+/* WELCOME JUMBRTRON */
+.section-1 {
+  padding-top: 18px;
+}
+.container {
+  max-width:60em;
+  padding: 0.2em;
+}
+.jumbotron {
+  width: 80%;
+  background: #fdf8f1;
+  opacity: inherit;
+  /* condenses jumbotron */
+  padding: 1rem;
+}
+.welcome {
+  /* condenses welcome row */
+  width: 100%;
+  /* centers welcome row */
+  margin: 0 auto;
+  padding-top: 2rem;
+  font-family: 'Lobster', cursive;
+  color: rgb(0, 0, 85);
+  text-align: center;
+  font-size: 2.1em !important;
+}
+/* stylizes horizontal line */
+.welcome img {
+  height: 75px;
+  width: 100px;
+}
+.lead {
+  font-family: 'Source Serif Pro', serif;
+  color: rgb(0, 0, 85);
+  text-shadow: 1px 1px 15px rgb(255, 255, 255);
+}
+
+
+/* Player Birth Map */
+.container h1 {
+  align-items: center;
+  font-family: 'Lobster', cursive;
+  color: rgb(0, 0, 85);
+  font-size: 350%;
+  /* vertical, horizontal, width, color of shadow */
+  text-shadow: #FFFFFF;
+  text-shadow: 2px 2px 0 #fdf8f1, 2px -2px 0 #fdf8f1, -2px 2px 0 #fdf8f1, -2px -2px 0 #fdf8f1, 2px 0px 0 #fdf8f1, 0px 2px 0 #fdf8f1, -2px 0px 0 #fdf8f1, 0px -2px 0 #fdf8f1;
+  margin-bottom: 1rem;
+}
+#map {
+    width: 800px;
+    height: 700px;
+    min-height: 100%;
+    min-width: 152%;
+    display: block;
+    border: solid;
+    border-width: 7px;
+    border-color: #fdf8f1;
+}
+#map-holder {
+    height: 100%;
+}
+.leaflet-popup-content-wrapper {
+  background-color: #f0f0f0
+}
+.fill {
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  color: #fdf8f1;
+  font-weight: bold;
+  background: rgb(0, 0, 85);
+}
+
+/* SOURCES PAGE */
+
+
+
+@media screen and (max-width: 991px) {
+  .navbar .navbar-brand img {
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .navbar-brand img {
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .section-1 {
+    padding-top: 18px;
+  }
+  .section-1 .jumbotron {
+    width: 80%;
+    background: #fdf8f1;
+    opacity: inherit;
+    /* condenses jumbotron */
+    padding: 1rem;
+  }
+  .section-1 .welcome p {
+    font-size: 14px;
+  }
+
+
+  .container h1 {
+    font-size: 250%;
+  }
+  #map {
+      border-width: 5px;
+      height: 400px;
+      width: 300px;
+      min-width: 70%;
+      min-height: 40%;
+  }
 }

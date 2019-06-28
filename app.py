@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 
 # Create our database model
 class Baseball(db.Model):
-    __tablename__ = 'baseball'
+    __tablename__ = 'final'
 
     id = db.Column(db.Integer, primary_key=True)
     birthYear = db.Column(db.Integer)
@@ -25,6 +25,10 @@ class Baseball(db.Model):
     nameLast = db.Column(db.String)
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
+    country_iso_code = db.Column(db.String)
+    deathYear = db.Column(db.Integer)
+    birthCity = db.Column(db.String)
+    flags = db.Column(db.String)
 
     def __repr__(self):
         return '<Baseball %r>' % (self.name)
@@ -41,7 +45,7 @@ def setup():
 @app.route("/")
 def home():
     """Render Home Page."""
-    return render_template("index2.html")
+    return render_template("index.html")
 
 
 @app.route("/birthYear")
@@ -49,21 +53,30 @@ def stats_data():
     """Return birthYear"""
     #get entire table, and print everything using "results"
     #match return (result) with original csv to see if everything will print
-    # Query for the top 10 emoji data
-    results = db.session.query(Baseball.birthYear, Baseball.nameFirst, Baseball.nameLast, Baseball.latitude, Baseball.longitude).\
+    # Query for the necessary data
+    results = db.session.query(Baseball.birthYear, Baseball.nameFirst, Baseball.nameLast, 
+        Baseball.latitude, Baseball.longitude, Baseball.country_iso_code, Baseball.deathYear,
+        Baseball.birthCity, Baseball.flags).\
         order_by(Baseball.birthYear.desc()).\
-        limit(10).all()
+        limit(20000).all()
 
     # Create lists from the query results
     nameLast = [result[0] for result in results]
     birthYear = [result[1] for result in results]
+    nameFirst = [result[2] for result in results]
+    latitude = [result[3] for result in results]
+    longitude = [result[4] for result in results]
+    country_iso_code = [result[5] for result in results]
+    deathYear = [result[6] for result in results]
+    birthCity = [result[7] for result in results]
+    flags = [result[8] for result in results]
     print(results)
     # # Generate the plot trace
-    trace = {
-        "x": nameLast,
-        "y": birthYear,
-        "type": "bar"
-    }
+    # trace = {
+    #     "x": nameLast,
+    #     "y": birthYear,
+    #     "type": "bar"
+    
     return jsonify(results)
 
 
