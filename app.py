@@ -29,6 +29,9 @@ class Baseball(db.Model):
     deathYear = db.Column(db.Integer)
     birthCity = db.Column(db.String)
     flags = db.Column(db.String)
+    deathCity = db.Column(db.String)
+    deathCountry = db.Column(db.String)
+    
 
     def __repr__(self):
         return '<Baseball %r>' % (self.name)
@@ -56,7 +59,7 @@ def stats_data():
     # Query for the necessary data
     results = db.session.query(Baseball.birthYear, Baseball.nameFirst, Baseball.nameLast, 
         Baseball.latitude, Baseball.longitude, Baseball.country_iso_code, Baseball.deathYear,
-        Baseball.birthCity, Baseball.flags).\
+        Baseball.birthCity, Baseball.flags, Baseball.deathCity, Baseball.deathCountry).\
         order_by(Baseball.birthYear.desc()).\
         limit(20000).all()
 
@@ -70,16 +73,44 @@ def stats_data():
     deathYear = [result[6] for result in results]
     birthCity = [result[7] for result in results]
     flags = [result[8] for result in results]
+    deathCity = [result[9] for result in results]
+    deathCountry = [result[10] for result in results]
     print(results)
+    
+    return jsonify(results)
+
+@app.route("/deathYear")
+def stats_data2():
+    """Return deathYear"""
+    #get entire table, and print everything using "results"
+    #match return (result) with original csv to see if everything will print
+    # Query for the necessary data
+    results2 = db.session.query(Baseball.birthYear, Baseball.nameFirst, Baseball.nameLast, 
+        Baseball.latitude, Baseball.longitude, Baseball.country_iso_code, Baseball.deathYear,
+        Baseball.birthCity, Baseball.flags, Baseball.deathCity, Baseball.deathCountry).\
+        order_by(Baseball.birthYear.desc()).\
+        limit(20000).all()
+
+    # Create lists from the query results
+    nameLast = [result[0] for result in results2]
+    birthYear = [result[1] for result in results2]
+    nameFirst = [result[2] for result in results2]
+    latitude = [result[3] for result in results2]
+    longitude = [result[4] for result in results2]
+    country_iso_code = [result[5] for result in results2]
+    deathYear = [result[6] for result in results2]
+    birthCity = [result[7] for result in results2]
+    flags = [result[8] for result in results2]
+    deathCity = [result[9] for result in results2]
+    deathCountry = [result[10] for result in results2]
+    print(results2)
     # # Generate the plot trace
     # trace = {
     #     "x": nameLast,
     #     "y": birthYear,
     #     "type": "bar"
     
-    return jsonify(results)
-
-
+    return jsonify(results2)
 # @app.route("/emoji_id")
 # def emoji_id_data():
 #     """Return emoji score and emoji id"""
