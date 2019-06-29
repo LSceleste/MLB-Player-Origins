@@ -48,7 +48,7 @@ var myMap = L.map("map2", {
           playerData[i].nameLast + "</h8>" + "</h7><hr>" + "<h7>" + "Death Place: " + 
           "</h7>" + "<h8>" + playerData[i].deathCity + ", " + playerData[i].deathCountry +
           "<img  style='max-width:75px' src=" + playerData[i].flags + " ></img></h8><hr>" + 
-          "<h7>" + "Birth Year: " + "<h8>" + playerData[i].deathYear + "</h8></p>"));
+          "<h7>" + "Death Year: " + "<h8>" + playerData[i].deathYear + "</h8></p>"));
       }
   
     
