@@ -111,6 +111,11 @@ def stats_data2():
     #     "type": "bar"
     
     return jsonify(results2)
+
+@app.route("/sources")
+def sources():
+    """Render Home Page."""
+    return render_template("sources.html")
 # @app.route("/emoji_id")
 # def emoji_id_data():
 #     """Return emoji score and emoji id"""

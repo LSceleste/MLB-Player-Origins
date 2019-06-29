@@ -196,4 +196,11 @@ html, body
       min-width: 70%;
       min-height: 40%;
   }
+  #map2 {
+    border-width: 5px;
+    height: 400px;
+    width: 300px;
+    min-width: 70%;
+    min-height: 40%;
+}
 }
