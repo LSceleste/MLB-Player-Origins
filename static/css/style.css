@@ -105,6 +105,7 @@ html, body
   text-shadow: #FFFFFF;
   text-shadow: 2px 2px 0 #fdf8f1, 2px -2px 0 #fdf8f1, -2px 2px 0 #fdf8f1, -2px -2px 0 #fdf8f1, 2px 0px 0 #fdf8f1, 0px 2px 0 #fdf8f1, -2px 0px 0 #fdf8f1, 0px -2px 0 #fdf8f1;
   margin-bottom: 1rem;
+  padding-top: 50px;
 }
 #map {
     width: 800px;
@@ -196,4 +197,11 @@ html, body
       min-width: 70%;
       min-height: 40%;
   }
+  #map2 {
+    border-width: 5px;
+    height: 400px;
+    width: 300px;
+    min-width: 70%;
+    min-height: 40%;
+}
 }
