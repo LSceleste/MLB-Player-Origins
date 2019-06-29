@@ -133,9 +133,6 @@
   </div>
 
 <!-- CODE FOR LOADING CONTENT AS VIEWER SCROLLS DOWN PAGE -->
-<!-- Problem with this link (line 138), our code does not like this for some reason, we might have to CSS the background
-and get rid of this line completely in order for it to run error free. reference line 
-43 for previous error correction-->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script>
       window.sr = ScrollReveal({ duration : 1000 });
@@ -147,9 +144,6 @@ and get rid of this line completely in order for it to run error free. reference
     </script>
 
 <!-- Javascript -->
-    <!-- <script type="text/javascript" src="config.js"></script>
-    <script type="text/javascript" src="logic.js"></script>
-    <script type="text/javascript" src="leaflet_head.js"></script> -->
     <script src="{{ url_for('static', filename='js/config.js') }}"></script>
     <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
     <script src="{{ url_for('static', filename='js/leaflet_head.js') }}"></script>
