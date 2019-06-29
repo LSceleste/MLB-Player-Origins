@@ -1,4 +1,4 @@
-<h1 align="center"> BaseballVisualization <h1>
+<h1 align="center"> MLB Player Origins <h1>
 
 <p align="center">
   <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Major_League_Baseball_logo.svg/1200px-Major_League_Baseball_logo.svg.png" width="500" align="middle">
