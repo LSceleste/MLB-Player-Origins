@@ -61,11 +61,8 @@ class Baseball(db.Model):
 # Create database tables
 @app.before_first_request
 def setup():
-<<<<<<< HEAD
     print("set up")# Recreate database each time for demo
     # db.drop_all()
-=======
->>>>>>> f50d5dc9613c083685de5799f9c9821938619362
     db.create_all()
     db.create_all(bind='combined_db')
 
@@ -124,7 +121,6 @@ def stats_data2():
     longitude = [result[4] for result in results2]
     country_iso_code = [result[5] for result in results2]
     deathYear = [result[6] for result in results2]
-<<<<<<< HEAD
     flags = [result[7] for result in results2]
     deathCity = [result[8] for result in results2]
     deathCountry = [result[9] for result in results2]
@@ -134,14 +130,6 @@ def stats_data2():
     #     "x": nameLast,
     #     "y": birthYear,
     #     "type": "bar"
-=======
-    birthCity = [result[7] for result in results2]
-    flags = [result[8] for result in results2]
-    deathCity = [result[9] for result in results2]
-    deathCountry = [result[10] for result in results2]
-    
-    print(results2)
->>>>>>> f50d5dc9613c083685de5799f9c9821938619362
     
     return jsonify(results2)
 
