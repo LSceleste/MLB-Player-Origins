@@ -17,7 +17,9 @@
 
     <!-- d3 JS -->
     <script src="https://d3js.org/d3.v4.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
     <!-- Marker Cluster JS & CSS -->
     <script type="text/javascript" src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
@@ -53,13 +55,13 @@
             <a href="/" class="nav-link">About</a>
           </li> 
           <li class="nav-item">
-            <a href="/#map-placement" class="nav-link">Player Birth Map</a>
+            <a href="/#section-birthmap" class="nav-link">Player Birth Map</a>
           </li>
           <li class="nav-item">
             <a href="/#section-deathmap" class="nav-link">Player Death Map</a>
           </li>
           <li class="nav-item">
-            <a href="/#section-chart" class="nav-link">Player Time Chart</a>
+            <a href="/#section-chart" class="nav-link">Player Chart</a>
           </li>
           <li class="nav-item">
               <a href="/sources" class="nav-link">Sources</a>
@@ -118,13 +120,13 @@
 
 
 
-<!-- PLAYER PIE CHART -->
+<!-- PLAYER CHART -->
   <div class="section-chart" id="section-chart">
-    <div id="map-holder">
+    <div id="chart-holder">
       <div class="container padding">
         <div class="row justify-content-center padding">
-          <h1>Player Time Chart</h1>   
-          <div id="chart"></div>
+          <h1>Player Chart</h1>   
+          <div id="graph"></div>
         </div>
       </div>
     </div>
@@ -161,5 +163,6 @@
     <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
     <script src="{{ url_for('static', filename='js/leaflet_head.js') }}"></script>
     <script src="{{ url_for('static', filename='js/logic2.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plotss.js') }}"></script>
   </body>
 </html>

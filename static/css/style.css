@@ -111,7 +111,7 @@ html, body
     width: 800px;
     height: 700px;
     min-height: 100%;
-    min-width: 152%;
+    min-width: 135%;
     display: block;
     border: solid;
     border-width: 7px;
@@ -121,7 +121,7 @@ html, body
   width: 800px;
   height: 700px;
   min-height: 100%;
-  min-width: 152%;
+  min-width: 135%;
   display: block;
   border: solid;
   border-width: 7px;
@@ -130,6 +130,14 @@ html, body
 #map-holder {
     height: 100%;
 }
+
+
+#graph {
+  size: 100%;
+}
+
+
+
 .leaflet-popup-content-wrapper {
   background-color: #f0f0f0
 }
@@ -196,6 +204,9 @@ html, body
       width: 300px;
       min-width: 70%;
       min-height: 40%;
+  }
+  #map-holder {
+    padding: 0;
   }
   #map2 {
     border-width: 5px;

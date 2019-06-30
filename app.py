@@ -133,6 +133,22 @@ def stats_data2():
     
     return jsonify(results2)
 
+
+
+# 
+# 
+# 
+# 
+# CREATE ROUTE FOR PLOTLY GRAPH? #
+# @app.route("/graph")
+# def graph_data():
+# 
+# 
+# 
+# 
+# 
+
+
 @app.route("/sources")
 def sources():
     """Render Home Page."""
