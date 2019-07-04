@@ -24,6 +24,7 @@ This project will allow us to visually demonstrate both the concentration and th
 
 ### Player Chart:
 
+![playerchart](media/playerchart.gif)
 
 
 ## Heroku App: [MLB Player Origins](#)
