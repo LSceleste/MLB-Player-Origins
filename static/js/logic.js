@@ -47,7 +47,7 @@ var myMap = L.map("map", {
           .bindPopup("<h7>" + "Player: " + "<h8>" + playerData[i].nameFirst + " " +
           playerData[i].nameLast + "</h8>" + "</h7><hr>" + "<h7>" + "Birth Place: " + 
           "</h7>" + "<h8>" + playerData[i].birthCity + ", " + playerData[i].country_iso_code +
-          "<img  style='max-width:75px' src=" + playerData[i].flags + " ></img></h8><hr>" + 
+          "<br><img  class='center' align='center' style='max-width:75px' src=" + playerData[i].flags + " ></img></h8><hr>" + 
           "<h7>" + "Birth Year: " + "<h8>" + playerData[i].birthYear + "</h8></p>"));
       }
   

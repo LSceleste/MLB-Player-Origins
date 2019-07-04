@@ -130,10 +130,17 @@ html, body
 #map-holder {
     height: 100%;
 }
-
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-bottom: 2px;
+}
 
 #graph {
   size: 100%;
+  padding-bottom: 10px;
 }
 
 
