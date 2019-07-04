@@ -10,6 +10,9 @@ We are looking at baseball players ranging over the history of the MLB. We want 
 
 This project will allow us to visually demonstrate both the concentration and the spread of baseball as a global sport over time. It will also demonstrate if there are locales which lend themselves well to the production of major league baseball players.
 
+## Heroku App: [MLB Player Origins](https://baseball-origins.herokuapp.com/)
+
+<br>
 
 ## Visualizations: 
 
@@ -27,4 +30,4 @@ This project will allow us to visually demonstrate both the concentration and th
 ![playerchart](media/playerchart.gif)
 
 
-## Heroku App: [MLB Player Origins](#)
+
