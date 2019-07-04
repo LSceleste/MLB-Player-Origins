@@ -15,9 +15,12 @@ This project will allow us to visually demonstrate both the concentration and th
 
 ### Player Birth Map:
 
-![4-scatter](media/birthmap.gif)
+![birthmap](media/birthmap.gif)
 
 ### Player Death Map:
+
+![deathmap](media/deathmap.gif)
+
 
 ### Player Chart:
 
